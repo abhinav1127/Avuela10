@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.VcTestController">
+   <center>
+      <AnchorPane prefHeight="500.0" prefWidth="820.0" style="-fx-background-color: #000000;" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="title" layoutX="21.0" layoutY="34.0" style="-fx-text-fill: #af7476;" text="Possessive Nouns">
+               <font>
+                  <Font size="47.0" />
+               </font>
+            </Label>
+            <Label fx:id="info" layoutX="24.0" layoutY="106.0" prefHeight="299.0" prefWidth="225.0" style="-fx-text-fill: #74AFAD;" text="Subject!" wrapText="true">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="image" fitHeight="299.0" fitWidth="527.0" layoutX="281.0" layoutY="106.0" pickOnBounds="true" preserveRatio="true" />
+            <Label layoutX="30.0" layoutY="426.0" prefHeight="65.0" prefWidth="779.0" style="-fx-text-fill: #74AFAD;" text="Don't forget the following translations: I=yo, you (informal) = tú, you (formal)= usted, he= él, she= ella, nosotros= us, they (informal)= vosotros (only used in spain), they= ustedes" wrapText="true">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="exit" layoutX="638.0" layoutY="40.0" mnemonicParsing="false" onAction="#handle" prefHeight="37.0" prefWidth="106.0" style="-fx-background-color: #006699;" text="Exit" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" style="-fx-background-color: #74AFAD;" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.VocabViewController">
+   <children>
+      <Button fx:id="exit" layoutX="736.0" layoutY="51.0" mnemonicParsing="false" onAction="#handle" prefHeight="38.0" prefWidth="116.0" text="Exit" />
+      <TextField layoutX="-14.0" prefHeight="130.0" prefWidth="728.0" style="-fx-background-color: #74AFAD; -fx-text-fill: #af7476;" text="Vocabulary">
+         <font>
+            <Font size="68.0" />
+         </font>
+      </TextField>
+      <TextField layoutX="16.0" layoutY="103.0" prefHeight="38.0" prefWidth="879.0" style="-fx-background-color: #74AFAD;" text="Choose a set to learn about words related to each subject! Use the slider to switch between words:">
+         <font>
+            <Font name="Times New Roman" size="21.0" />
+         </font>
+      </TextField>
+      <ButtonBar layoutX="33.0" layoutY="179.0" prefHeight="49.0" prefWidth="842.0">
+        <buttons>
+          <Button fx:id="general" mnemonicParsing="false" onAction="#handleFCSelection" style="-fx-background-color: #ad74af;" text="General" />
+            <Button fx:id="school" mnemonicParsing="false" onAction="#handleFCSelection" prefHeight="27.0" prefWidth="300.0" style="-fx-background-color: #ad74af;" text="School" />
+            <Button fx:id="places" mnemonicParsing="false" onAction="#handleFCSelection" style="-fx-background-color: #ad74af;" text="Places" />
+            <Button fx:id="business1" mnemonicParsing="false" onAction="#handleFCSelection" style="-fx-background-color: #ad74af;" text="Business 1" />
+            <Button fx:id="business2" mnemonicParsing="false" onAction="#handleFCSelection" style="-fx-background-color: #ad74af;" text="Business 2" />
+        </buttons>
+      </ButtonBar>
+      <ButtonBar layoutX="33.0" layoutY="218.0" prefHeight="51.0" prefWidth="842.0">
+         <buttons>
+            <Button fx:id="household" mnemonicParsing="false" onAction="#handleFCSelection" style="-fx-background-color: #ad74af;" text="Household" />
+            <Button fx:id="bClothing" mnemonicParsing="false" onAction="#handleFCSelection" prefHeight="27.0" prefWidth="300.0" style="-fx-background-color: #ad74af;" text="Body/ Clothing" />
+            <Button fx:id="nature" mnemonicParsing="false" onAction="#handleFCSelection" style="-fx-background-color: #ad74af;" text="Nature" />
+            <Button fx:id="religion" mnemonicParsing="false" onAction="#handleFCSelection" prefHeight="27.0" style="-fx-background-color: #ad74af;" text="Religion" />
+            <Button fx:id="transport" mnemonicParsing="false" onAction="#handleFCSelection" style="-fx-background-color: #ad74af;" text="Transportation" />
+         </buttons>
+      </ButtonBar>
+      <ButtonBar layoutX="103.0" layoutY="551.0" prefHeight="49.0" prefWidth="723.0">
+        <buttons>
+          <Button fx:id="dEnglish" mnemonicParsing="false" onAction="#handleDisplay" prefHeight="44.0" prefWidth="234.0" style="-fx-background-color: #76af74;" text="Display English" />
+            <Button fx:id="dSpanish" mnemonicParsing="false" onAction="#handleDisplay" prefHeight="44.0" prefWidth="135.0" style="-fx-background-color: #76af74;" text="Display Spanish" />
+            <Button fx:id="dBoth" minWidth="65.0" mnemonicParsing="false" onAction="#handleDisplay" prefHeight="41.0" prefWidth="135.0" style="-fx-background-color: #76af74;" text="Display Both" />
+        </buttons>
+      </ButtonBar>
+      <Button fx:id="prevCard" layoutX="144.0" layoutY="624.0" mnemonicParsing="false" onAction="#handleCardSelection" prefHeight="44.0" prefWidth="234.0" style="-fx-background-color: #af7476;" text="Previous Word" />
+      <Button fx:id="nextCard" layoutX="581.0" layoutY="623.0" mnemonicParsing="false" onAction="#handleCardSelection" prefHeight="44.0" prefWidth="234.0" style="-fx-background-color: #af7476;" text="Next Word" />
+      <Label fx:id="whichCard" layoutX="421.0" layoutY="623.0" prefHeight="48.0" prefWidth="160.0" text="Card #1" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="29.0" />
+         </font>
+      </Label>
+      <Label fx:id="english" alignment="CENTER" layoutX="30.0" layoutY="272.0" prefHeight="256.0" prefWidth="418.0" text="English" wrapText="true">
+         <font>
+            <Font name="System Bold" size="52.0" />
+         </font>
+      </Label>
+      <Label fx:id="spanish" alignment="CENTER" layoutX="470.0" layoutY="272.0" prefHeight="256.0" prefWidth="418.0" text="Spanish" wrapText="true">
+         <font>
+            <Font name="System Bold" size="52.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
