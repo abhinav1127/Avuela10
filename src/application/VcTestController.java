@@ -8,6 +8,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.web.WebEngine;
+import javafx.scene.web.WebView;
 import javafx.stage.Stage;
 
 public class VcTestController {
@@ -23,15 +25,24 @@ public class VcTestController {
 	private ImageView image;
 	@FXML
 	private Button exit;
+	@FXML
+	private WebView wView;
 	
 	//this method runs upon opening and will call contentSelect()
 	@FXML
+	/**
+	 * This method will run upon the opening of grammarTest.view and serves to call the method contentSelect()
+	 */
 	private void initialize(){
 		contentSelect();
+		
 	}
 	
 	
 	//Will decide which type of content to display
+	/**
+	 * This method decides which content will be displayed on the page depending on the value of picSelect
+	 */
 	private void contentSelect(){
 		
 		//switches on the picSelect1 integer to display the different content
@@ -54,11 +65,13 @@ public class VcTestController {
 				image.setImage(new Image ("file:resources/imperfectTense.png"));
 				info.setText("The Spanish imperfect tense (el imperfecto) is used to describe past habitual actions or to talk about what someone was doing when they were interrupted by something else. There are only two sets of endings for regular imperfect verbs in Spanish, one for -ar verbs and one for both -er and -ir verbs.");
 				break;
-				// displays the content for Subjunctive Tense
+				// displays the content for Subjunctive Tense. This also has a YouTube link
 			case 4:
 				title.setText("Subjunctive Tense");
-				image.setImage(new Image ("file:resources/subjunctiveTense.png"));
 				info.setText("The present subjunctive functions much like the present indicative time-wise, except it deals with situations of doubt, desire, emotion, and is generally subjective. On the other hand, the present tense is true, real, and objective. To the end of the stem, add the appropriate ending depending on the subject of the verb.");
+				wView.setOpacity(1);
+				WebEngine wEngine= wView.getEngine();
+				wEngine.load("https://www.youtube.com/watch?v=pG_2m9_sTTY");
 				break;
 				// displays the content for Present Progressive Tense
 			case 5:
@@ -76,12 +89,20 @@ public class VcTestController {
 	}
 	
 	//handles the only event that will happen in this stage: closing the view
+	/**
+	 * Helps close the Stage
+	 * @param event Specifies the characteristics of the event that has happened so that we can identify the source
+	 * @throws IOException if stream to aFile cannot be written to or closed.
+	 */
 	public void handle(ActionEvent event) throws IOException{
 		if(event.getSource()==exit){
 			exitAction();
 		}
 	}
 	
+	/**
+	 * Closes the stage when called
+	 */
 	private void exitAction(){
 	    // get a handle to the stage
 	    Stage stage = (Stage) exit.getScene().getWindow();

@@ -49,15 +49,28 @@ public class MainViewController {
 
 	
 	@FXML
+	/**
+	 * This method is called upon the opening of the program and moves pic to the front of the displayed scene
+	 */
 	private void initialize(){
 		pic.toFront();
 	}
-	//make the setter for prevStage
+	
+	//makes the setter for prevStage
+	/**
+	 * makes the setter for prevStage
+	 * @param stage this is the stage to which the local prevStage will be set.
+	 */
 	public void setPrevStage(Stage stage){
          this.prevStage = stage;
     }
 
 	//method to handle all events
+	/**
+	 * Helps decide what to do based on the button selected. Could exit the Stage, open a new Stage, or show/ hide resources
+	 * @param event Specifies the characteristics of the event that has happened so that we can identify the source
+	 * @throws IOException if stream to aFile cannot be written to or closed.
+	 */
 	public void handle(ActionEvent event) throws IOException{
 		
 		/*Change an integer to a certain value depending on the ActionEvent’s source 

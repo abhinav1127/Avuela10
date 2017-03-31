@@ -6,6 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.web.WebView?>
 
 <BorderPane xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.VcTestController">
    <center>
@@ -28,6 +29,7 @@
                </font>
             </Label>
             <Button fx:id="exit" layoutX="638.0" layoutY="40.0" mnemonicParsing="false" onAction="#handle" prefHeight="37.0" prefWidth="106.0" style="-fx-background-color: #006699;" text="Exit" textFill="WHITE" />
+            <WebView fx:id="wView" layoutX="273.0" layoutY="103.0" opacity="0.0" prefHeight="303.0" prefWidth="484.0" />
          </children>
       </AnchorPane>
    </center>

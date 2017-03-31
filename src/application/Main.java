@@ -25,6 +25,10 @@ public class Main extends Application {
 
 	//Override method and construct the Stage from the Pane, Loader, and Scene and display it
 	@Override
+	/**
+	 * constructs the primary stage when the program is initialized
+	 * @param primaryStage the private variable primaryStage will be set to copy this
+	 */
 	public void start(Stage primaryStage) {
 		try {
 			this.primaryStage= primaryStage;
@@ -53,6 +57,10 @@ public class Main extends Application {
 	}
 
 	//Use the main method to launch the arguments
+	/**
+	 * Use the main method to launch the arguments
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		launch(args);
 	}

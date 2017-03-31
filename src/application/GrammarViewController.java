@@ -11,6 +11,11 @@ import javafx.scene.layout.Pane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
+/**
+ * 
+ * @author Abhinav Tirath
+ *
+ */
 public class GrammarViewController {
 
 	//Set up the Buttons that choose which FlashcardSet is being displayed
@@ -38,12 +43,12 @@ public class GrammarViewController {
 	//initialize the Stage to return to the main menu
 	Stage prevStage;
 	
-	//make the setter for prevStage
-	private void setPrevStage(Stage stage){
-        this.prevStage = stage;
-   }
-	
 	//method to handle all events
+	/**
+	 * Helps decide what to do based on the button selected. Could exit the Stage or open a new Stage
+	 * @param event Specifies the characteristics of the event that has happened so that we can identify the source
+	 * @throws IOException if stream to aFile cannot be written to or closed.
+	 */
 	public void handle(ActionEvent event) throws IOException{
 		
 		
@@ -90,7 +95,7 @@ public class GrammarViewController {
 		}
 		
 		//decides the content that will be displays in the new view
-		GrammarTestController.setPicSelect(count);
+		GrammarTestController.picSelect=count;
 		
 		//switch on the integer value
 		switch(count){
@@ -193,6 +198,9 @@ public class GrammarViewController {
 
 	}
 	
+	/**
+	 * Closes the stage when called
+	 */
 	private void exitAction(){
 	    // get a handle to the stage
 	    Stage stage = (Stage) exit.getScene().getWindow();

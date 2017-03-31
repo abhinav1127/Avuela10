@@ -31,12 +31,13 @@ public class VcViewController {
 	@FXML
 	private Button exit;
 	
-	//make the setter for prevStage
-	private void setPrevStage(Stage stage){
-        this.prevStage = stage;
-	}
 	
 	//method to handle all events
+	/**
+	 * Helps decide what to do based on the button selected. Could exit the Stage or open a new Stage.
+	 * @param event Specifies the characteristics of the event that has happened so that we can identify the source
+	 * @throws IOException if stream to aFile cannot be written to or closed.
+	 */
 	public void handle(ActionEvent event) throws IOException{
 		
 		
@@ -147,6 +148,9 @@ public class VcViewController {
 
 	}
 	
+	/**
+	 * Closes the stage when called
+	 */
 	private void exitAction(){
 	    // get a handle to the stage
 	    Stage stage = (Stage) exit.getScene().getWindow();

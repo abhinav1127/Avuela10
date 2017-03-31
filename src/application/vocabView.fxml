@@ -15,7 +15,7 @@
             <Font size="68.0" />
          </font>
       </TextField>
-      <TextField layoutX="16.0" layoutY="103.0" prefHeight="38.0" prefWidth="879.0" style="-fx-background-color: #74AFAD;" text="Choose a set to learn about words related to each subject! Use the slider to switch between words:">
+      <TextField layoutX="16.0" layoutY="103.0" prefHeight="57.0" prefWidth="879.0" style="-fx-background-color: #74AFAD;" text="Choose a set to learn about words related to each subject!">
          <font>
             <Font name="Times New Roman" size="21.0" />
          </font>

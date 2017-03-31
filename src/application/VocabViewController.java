@@ -67,18 +67,20 @@ public class VocabViewController {
 	private Button exit;
 	
 	
-	//make the setter for prevStage
-	private void setPrevStage(Stage stage){
-        this.prevStage = stage;
-	}
-	
 	//This method runs upon the opening of the scene and helps prevent null pointer exceptions by setting the opacity of the Label whichCard to 0
 	@FXML
+	/**
+	 * This method will run upon the opening of vocabView.fxml and serves to call the method contentSelect()
+	 */
 	private void initialize(){
 		whichCard.setOpacity(0);
 	}
 	
-	//This method returns a set initialized with flashcards with English and Spanish that are relevant to the General section 
+	//This method returns a set initialized with flashcards with English and Spanish that are relevant to the General section
+	/**
+	 * This method sets up a FlashcardSet with the 20 Flashcards with English and Spanish vocabulary relevant to the subject 'General'
+	 * @return returns the aforementioned FlashcardSet is returned so that chosenSet can be assigned to it 
+	 */
 	private FlashcardSet general1Construction(){
 		FlashcardSet general1= new FlashcardSet("general", 20);
 		general1.fcArray[0]= new Flashcard("Good morning", "Buenos días");
@@ -106,6 +108,10 @@ public class VocabViewController {
 	}
 	
 	//This method returns a set initialized with flashcards with English and Spanish that are relevant to the School section 
+	/**
+	 * This method sets up a FlashcardSet with the 20 Flashcards with English and Spanish vocabulary relevant to the subject 'School;'
+	 * @return returns the aforementioned FlashcardSet is returned so that chosenSet can be assigned to it 
+	 */
 	private FlashcardSet school1Construction(){
 		FlashcardSet school1= new FlashcardSet("general", 20);
 		school1.fcArray[0]= new Flashcard("to draw", "dibujar");
@@ -133,6 +139,10 @@ public class VocabViewController {
 	}
 	
 	//This method returns a set initialized with flashcards with English and Spanish that are relevant to the Places section 
+	/**
+	 * This method sets up a FlashcardSet with the 20 Flashcards with English and Spanish vocabulary relevant to the subject 'Places'
+	 * @return returns the aforementioned FlashcardSet is returned so that chosenSet can be assigned to it 
+	 */
 	private FlashcardSet places1Construction(){
 		FlashcardSet places1= new FlashcardSet("places1", 20);
 		places1.fcArray[0]= new Flashcard("airport", "el aeropuerto");
@@ -158,7 +168,11 @@ public class VocabViewController {
 		return places1;
 	}
 	
-	//This method returns a set initialized with flashcards with English and Spanish that are relevant to the Business1 section 
+	//This method returns a set initialized with flashcards with English and Spanish that are relevant to the Business1 section
+	/**
+	 * This method sets up a FlashcardSet with the 20 Flashcards with English and Spanish vocabulary relevant to the subject 'Business1'
+	 * @return returns the aforementioned FlashcardSet is returned so that chosenSet can be assigned to it 
+	 */
 	private FlashcardSet business11Construction(){
 		FlashcardSet business1= new FlashcardSet("business1", 20);
 		business1.fcArray[0]= new Flashcard("office", "la officina");
@@ -184,7 +198,11 @@ public class VocabViewController {
 		return business1;
 	}
 
-	//This method returns a set initialized with flashcards with English and Spanish that are relevant to the Business2 section 
+	//This method returns a set initialized with flashcards with English and Spanish that are relevant to the Business2 section
+	/**
+	 * This method sets up a FlashcardSet with the 20 Flashcards with English and Spanish vocabulary relevant to the subject 'Business2'
+	 * @return returns the aforementioned FlashcardSet is returned so that chosenSet can be assigned to it 
+	 */
 	private FlashcardSet business12Construction(){
 		FlashcardSet business2= new FlashcardSet("business2", 20);
 		business2.fcArray[0]= new Flashcard("to deposit", "depositar");
@@ -210,7 +228,11 @@ public class VocabViewController {
 		return business2;
 	}
 	
-	//This method returns a set initialized with flashcards with English and Spanish that are relevant to the Household section 
+	//This method returns a set initialized with flashcards with English and Spanish that are relevant to the Household section
+	/**
+	 * This method sets up a FlashcardSet with the 20 Flashcards with English and Spanish vocabulary relevant to the subject 'Household'
+	 * @return returns the aforementioned FlashcardSet is returned so that chosenSet can be assigned to it 
+	 */
 	private FlashcardSet household1Construction(){
 		FlashcardSet household1= new FlashcardSet("household", 20);
 		household1.fcArray[0]= new Flashcard("house", "la casa");
@@ -237,6 +259,10 @@ public class VocabViewController {
 	}
 	
 	//This method returns a set initialized with flashcards with English and Spanish that are relevant to the Body and Clothing section 
+	/**
+	 * This method sets up a FlashcardSet with the 20 Flashcards with English and Spanish vocabulary relevant to the subject 'Body and Clothing'
+	 * @return returns the aforementioned FlashcardSet is returned so that chosenSet can be assigned to it 
+	 */
 	private FlashcardSet bClothing1Construction(){
 		FlashcardSet bClothing1= new FlashcardSet("bClothing", 20);
 		bClothing1.fcArray[0]= new Flashcard("head", "la cabeza");
@@ -263,6 +289,10 @@ public class VocabViewController {
 	}
 	
 	//This method returns a set initialized with flashcards with English and Spanish that are relevant to the Nature section 
+	/**
+	 * This method sets up a FlashcardSet with the 20 Flashcards with English and Spanish vocabulary relevant to the subject 'Nature'
+	 * @return returns the aforementioned FlashcardSet is returned so that chosenSet can be assigned to it 
+	 */
 	private FlashcardSet nature1Construction(){
 		FlashcardSet nature1= new FlashcardSet("nature", 20);
 		nature1.fcArray[0]= new Flashcard("dog", "perro/a");
@@ -288,7 +318,11 @@ public class VocabViewController {
 		return nature1;
 	}
 	
-	//This method returns a set initialized with flashcards with English and Spanish that are relevant to the Religion section 
+	//This method returns a set initialized with flashcards with English and Spanish that are relevant to the Religion section
+	/**
+	 * This method sets up a FlashcardSet with the 20 Flashcards with English and Spanish vocabulary relevant to the subject 'Religion'
+	 * @return returns the aforementioned FlashcardSet is returned so that chosenSet can be assigned to it 
+	 */
 	private FlashcardSet religion1Construction(){
 		FlashcardSet religion1= new FlashcardSet("religion", 20);
 		religion1.fcArray[0]= new Flashcard("angel", "el ángel");
@@ -315,6 +349,10 @@ public class VocabViewController {
 	}
 	
 	//This method returns a set initialized with flashcards with English and Spanish that are relevant to the Transport section 
+	/**
+	 * This method sets up a FlashcardSet with the 20 Flashcards with English and Spanish vocabulary relevant to the subject 'Transport'
+	 * @return returns the aforementioned FlashcardSet is returned so that chosenSet can be assigned to it 
+	 */
 	private FlashcardSet transport1Construction(){
 		FlashcardSet transport1= new FlashcardSet("transport", 20);
 		transport1.fcArray[0]= new Flashcard("airplane", "avión");
@@ -342,6 +380,11 @@ public class VocabViewController {
 	
 	
 	//method to handle the selection of a flashcard set
+	/**
+	 * Helps choose which subject will be displayed
+	 * @param event Specifies the characteristics of the event that has happened so that we can identify the source
+	 * @throws IOException if stream to aFile cannot be written to or closed.
+	 */
 	public void handleFCSelection(ActionEvent event) throws IOException{
 		
 		
@@ -430,6 +473,11 @@ public class VocabViewController {
 	}
 		
 	//This method helps choose which words are displayed
+	/**
+	 * Helps modify which languages are being displayed
+	 * @param event Specifies the characteristics of the event that has happened so that we can identify the source
+	 * @throws IOException if stream to aFile cannot be written to or closed.
+	 */
 	public void handleDisplay(ActionEvent event) throws IOException{
 			
 		if(event.getSource()== this.dBoth){
@@ -455,6 +503,11 @@ public class VocabViewController {
 	}
 	
 	//method to handle the exit event
+	/**
+	 * Helps close the Stage
+	 * @param event Specifies the characteristics of the event that has happened so that we can identify the source
+	 * @throws IOException if stream to aFile cannot be written to or closed.
+	 */
 	public void handle(ActionEvent event) throws IOException{
 		
 		//calls exitAction to close the current Stage
@@ -464,6 +517,11 @@ public class VocabViewController {
 	}
 	
 	//Handles the changes in the selection of cards within a set
+	/**
+	 * Helps select which Flashcard within the chosenSet should be displayed
+	 * @param event Specifies the characteristics of the event that has happened so that we can identify the source
+	 * @throws IOException if stream to aFile cannot be written to or closed.
+	 */
 	public void handleCardSelection(ActionEvent event) throws IOException{
 		
 		//these parameters ensure that a null pointer exception will not be thrown
@@ -486,6 +544,11 @@ public class VocabViewController {
 		
 	}
 	
+	/**
+	 * Helps close the Stage
+	 * @param event Specifies the characteristics of the event that has happened so that we can identify the source
+	 * @throws IOException if stream to aFile cannot be written to or closed.
+	 */
 	private void exitAction(){
 	    // get a handle to the stage
 	    Stage stage = (Stage) exit.getScene().getWindow();

@@ -1,6 +1,7 @@
 package application;
 
 import java.io.IOException;
+
 import java.time.Duration;
 
 import javafx.animation.KeyFrame;
@@ -13,6 +14,11 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
+/**
+ * 
+ * @author Abhinav Tirath
+ *
+ */
 public class GrammarTestController {
 
 	//this variable will help decide which content is displayed
@@ -28,6 +34,9 @@ public class GrammarTestController {
 	private Button exit;
 	
 	//this method runs upon opening and will call contentSelect()
+	/**
+	 * This method will run upon the opening of grammarTest.fxml and serves to call the method contentSelect()
+	 */
 	@FXML
 	private void initialize(){
 		contentSelect();
@@ -35,6 +44,9 @@ public class GrammarTestController {
 	
 	
 	//Will decide which type of content to display
+	/**
+	 * This method decides which content will be displayed on the page depending on the value of picSelect
+	 */
 	private void contentSelect(){
 		
 		//switches on the picSelect integer to display the different content
@@ -108,12 +120,20 @@ public class GrammarTestController {
 	}
 
 	//handles the only event that will happen in this stage: closing the view
+	/**
+	 * Helps close the Stage
+	 * @param event Specifies the characteristics of the event that has happened so that we can identify the source
+	 * @throws IOException if stream to aFile cannot be written to or closed.
+	 */
 	public void handle(ActionEvent event) throws IOException{
 		if(event.getSource()==exit){
 			exitAction();
 		}
 	}
 	
+	/**
+	 * Closes the stage when called
+	 */
 	private void exitAction(){
 	    // get a handle to the stage
 	    Stage stage = (Stage) exit.getScene().getWindow();
@@ -121,11 +141,5 @@ public class GrammarTestController {
 	    stage.close();
 	}
 	
-	//makes the necessary getters and setters
-	public static int getPicSelect() {
-		return picSelect;
-	}
-	public static void setPicSelect(int picSelect) {
-		GrammarTestController.picSelect = picSelect;
-	}
+
 }
